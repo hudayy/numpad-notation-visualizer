@@ -20,6 +20,9 @@ document.getElementById("numberInput").addEventListener("input", update);
     
 function update() {
     let input = document.getElementById("numberInput").value;
+    const url = new URL(window.location)
+    url.searchParams.set("combo", input);
+    history.pushState(null, '', url);
     if (input == "") {
         document.getElementById("output").innerHTML = "";
         return;
@@ -29,6 +32,7 @@ function update() {
     document.getElementById("output").replaceChildren(emit(moves));
 };
 
+document.getElementById("numberInput").value = new URL(window.location).searchParams.get("combo");
 update();
 
 function emit(moves) {
