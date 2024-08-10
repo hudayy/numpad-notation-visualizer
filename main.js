@@ -60,7 +60,10 @@ function emitMove(move) {
     if (move.hold) span.appendChild(holdElement());
     for (let x of move.di) span.appendChild(diElement(x));
     if (move.di.length > 0 && move.buttons.length > 0) span.appendChild(plusElement())
-    for (let x of move.buttons) span.appendChild(buttonElement(x, move.air));
+    for (let i = 0; i < move.buttons.length; i++) {
+        span.appendChild(buttonElement(move.buttons[i], move.air));
+        if (i < move.buttons.length - 1) span.appendChild(plusElement());
+    }
 
     return span;
 }
