@@ -21,7 +21,7 @@ document.getElementById("numberInput").addEventListener("input", update);
 function update() {
     let input = document.getElementById("numberInput").value;
     const url = new URL(window.location)
-    url.searchParams.set("combo", input);
+    if (input != "") url.searchParams.set("combo", input);
     history.pushState(null, '', url);
     if (input == "") {
         document.getElementById("output").innerHTML = "";
