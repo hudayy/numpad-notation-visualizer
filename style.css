@@ -1,0 +1,141 @@
+body {
+    font-family: Inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+    color: white;
+}
+
+.main-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+    flex-flow: row wrap;
+    row-gap: 3px;
+    background-color: #080808;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.container {
+    text-align: center;
+    background: #111111;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 4px;
+    font-family: "Ubuntu Mono";
+}
+
+#output {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    flex-shrink: 1;
+}
+
+.chevron {
+    margin: 0px 16px;
+    filter: brightness(50%);
+    font-weight: bolder;
+}
+
+.move {
+    display: inline-flex;
+    align-items: center;
+}
+
+.ph-plus {
+    font-size: medium;
+    margin: 0px 6px;
+}
+
+.plus {
+    margin: 0px 12px;
+}
+
+.hold {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    background-color: black;
+    color: #ffdd00;
+    border: 3px solid #ffdd00;
+    margin: 2px;
+}
+
+.circle {
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Kanit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+div.button {
+    width: 36px;
+    height: 36px;
+    color: black;
+}
+
+.button-h {
+    background-color: #ff6666;
+}
+
+.button-t {
+    background-color: #66ff66;
+}
+
+.button-d {
+    background-color: #ffff66;
+}
+
+.button-m {
+    background-color: #aa44aa;
+}
+
+.button-l {
+    background-color: #9999ff;
+}
+
+div.button-s1 {
+    color: #cc44aa;
+    border: 4px solid #cc44aa;
+}
+
+div.button-super {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+div.button-s2 {
+    color: #669988;
+    border: 4px solid #669988;
+}
+
+i.ph {
+    font-weight: bold;
+}
