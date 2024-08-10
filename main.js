@@ -119,7 +119,7 @@ function airElement() {
 
 function parse(text) {
     const moves = [];
-    let chunks = text.toLowerCase().replace(/[^12346789tdmhls\[\ j]/gi, "").split(" ");
+    let chunks = text.toLowerCase().replace(/[^12346789tdmhls\[c\ j]/gi, "").split(" ");
     for (let chunk of chunks) {
         let chars = chunk.split("");
         moves.push(parseMove(chars));
@@ -142,7 +142,7 @@ function parseMove(chars) {
             }
         } else if (char.match(/[j]/)) {
             move.air = true;
-        } else if (char.match(/[\[]/)) {
+        } else if (char.match(/[\[c]/)) {
             move.hold = true;
         }
     }
