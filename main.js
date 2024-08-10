@@ -1,12 +1,12 @@
 const numberToSvg = {
-    "1": "/assets/down-left.svg",
-    "2": "/assets/down.svg",
-    "3": "/assets/down-right.svg",
-    "4": "/assets/left.svg",
-    "6": "/assets/right.svg",
-    "7": "/assets/up-left.svg",
-    "8": "/assets/up.svg",
-    "9": "/assets/up-right.svg"
+    "1": "./assets/down-left.svg",
+    "2": "./assets/down.svg",
+    "3": "./assets/down-right.svg",
+    "4": "./assets/left.svg",
+    "6": "./assets/right.svg",
+    "7": "./assets/up-left.svg",
+    "8": "./assets/up.svg",
+    "9": "./assets/up-right.svg"
 }
 
 class Move {
@@ -41,7 +41,7 @@ function emit(moves) {
         span.appendChild(emitMove(move));
         if (i < moves.length - 1) {
             const el = document.createElement("img");
-            el.src = "assets/right-chevron.svg"
+            el.src = "./assets/right-chevron.svg"
             el.style.width = "12px";
             el.style.height = "12px";
             el.classList.add("chevron");
@@ -68,7 +68,7 @@ function emitMove(move) {
 function plusElement() {
     const plus = document.createElement("img");
     plus.classList.add("plus");
-    plus.src = "/assets/plus.svg"
+    plus.src = "./assets/plus.svg"
     plus.style.width = "12px";
     plus.style.height = "12px";
     return plus;
