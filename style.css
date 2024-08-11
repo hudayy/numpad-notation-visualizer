@@ -13,11 +13,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50%;
+    max-width: 100%;
     flex-flow: row wrap;
     row-gap: 3px;
     background-color: #080808;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
 }
 
@@ -45,12 +45,38 @@ input {
     font-family: "Ubuntu Mono";
 }
 
+.output-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: center; /* Center the output container */
+}
+
 #output {
     font-size: 24px;
     display: flex;
     justify-content: center;
-    max-width: 90%;
+    max-width: 50%;
     flex-shrink: 1;
+}
+
+#screenshotButton {
+    margin-top: 0;
+    margin-left: 10px;
+    padding: 25px;
+    background-color: #080808;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#screenshotButton i {
+    font-size: 30px;
+    color: #666;
+    transition: 25ms;
+}
+
+#screenshotButton i:active {
+    color: white;
+    font-size: 35px;
 }
 
 .chevron {

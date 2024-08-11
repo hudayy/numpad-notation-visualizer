@@ -16,6 +16,35 @@ class Move {
     air = false;
 }
 
+document.getElementById('screenshotButton').addEventListener('click', async (event) => {
+    const element = document.querySelector('span.main-out');
+    if (!element) {
+        console.error('Element with class "main-out" not found.');
+        return;
+    }
+
+    try {
+        const canvas = await html2canvas(element);
+        canvas.toBlob(async (blob) => {
+            if (!blob) {
+                console.error('Failed to convert canvas to Blob.');
+                return;
+            }
+
+            try {
+                await navigator.clipboard.write([
+                    new ClipboardItem({ 'image/png': blob })
+                ]);
+            } catch (err) {
+                console.error('Failed to copy screenshot to clipboard: ', err);
+            }
+        });
+    } catch (err) {
+        console.error('Failed to capture screenshot: ', err);
+    }
+    event.target.classList.toggle('clicked');
+});
+
 document.getElementById("numberInput").addEventListener("input", update);
     
 function update() {
@@ -122,7 +151,6 @@ function airElement() {
     air.innerText = "j.";
     return air;
 }
-
 
 function parse(text) {
     const moves = [];
